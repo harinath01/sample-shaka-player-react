@@ -8,10 +8,11 @@ function App() {
   // Example stream data - replace with your actual data
   const sampleData = {
     data: {
-      playback_url: "https://d1p88m4giad8m0.cloudfront.net/transcoded/6EXY8M6ANFE/video.m3u8",
-      dash_url: "https://d1p88m4giad8m0.cloudfront.net/transcoded/6EXY8M6ANFE/video.mpd",
-      access_token: "3f7e4b29-541f-4cf9-bc17-f15d2d066b63",
-      asset_id: "6EXY8M6ANFE"
+      playback_url: "https://d384padtbeqfgy.cloudfront.net/transcoded/AgAFNEJn3kt/video.m3u8",
+      dash_url: "https://d384padtbeqfgy.cloudfront.net/transcoded/AgAFNEJn3kt/video.mpd",
+      access_token: "f9b11692-78c5-4d14-9385-5f1efb0b8f4e",
+      asset_id: "AgAFNEJn3kt",
+      org_id: "6eafqn"
     }
   };
 
@@ -20,7 +21,7 @@ function App() {
       <div className="App">
         <main>
           <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
-            <TP data={sampleData} />
+            <TP data={sampleData} orgId={sampleData.data.org_id} />
           </div>
         </main>
       </div>
