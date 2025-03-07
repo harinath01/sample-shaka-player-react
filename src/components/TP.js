@@ -63,6 +63,7 @@ const TP = ({ data, className = '', orgId = 'bfbsz3' }) => {
 
     // Setup FairPlay DRM for Safari
     const setupFairPlay = async (player) => {
+        window.shaka.polyfill.PatchedMediaKeysApple.install();
         try {
             console.log("Setting up FairPlay DRM");
 
@@ -303,14 +304,9 @@ const TP = ({ data, className = '', orgId = 'bfbsz3' }) => {
                 onLoadedData={handleVideoLoaded}
                 onError={handleVideoError}
                 className={`video-player ${isVideoLoaded ? 'loaded' : ''}`}
-                playsInline
-                webkit-playsinline="true"
-                x-webkit-airplay="allow"
                 autoPlay={false}
                 muted={isMobile}
                 style={{ display: error ? 'none' : 'block' }}
-                preload="auto"
-                crossOrigin="anonymous"
             />
         </div>
     );
